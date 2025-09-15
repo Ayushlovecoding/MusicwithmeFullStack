@@ -6,8 +6,16 @@ const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
 const app = express();
-app.use(cors());
+// ✅ Allow your Netlify frontend
+app.use(cors({
+  origin: "https://musicwithfullstack1.netlify.app", // frontend URL
+  methods: "GET,POST,PUT,DELETE",
+  credentials: true
+}));
+
+// Parse JSON
 app.use(express.json());
+
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)
