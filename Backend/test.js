@@ -3,7 +3,7 @@ const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fet
 
 async function test() {
   // Test Register
-  let res = await fetch("http://localhost:5000/api/register", {
+  let res = await fetch("https://musicwithmefullstack-1.onrender.com/api/register", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ 
@@ -15,7 +15,7 @@ async function test() {
   console.log("Register:", await res.json());
 
   // Test Login
-  res = await fetch("http://localhost:5000/api/login", {
+  res = await fetch("https://musicwithmefullstack-1.onrender.com/api/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ 
