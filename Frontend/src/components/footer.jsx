@@ -10,7 +10,7 @@ const Footer = () => {
         alt="Ayush Sharma"
         className="w-10 h-10 rounded-full object-cover"
       />
-      <p>@ 2030 ALl right reseverd Created by Ayush Sharma</p>
+      <p>@ 2030 ALL right reseverd Created by Ayush Sharma</p>
     </div>
   );
 };
